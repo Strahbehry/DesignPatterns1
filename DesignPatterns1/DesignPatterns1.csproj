@@ -63,12 +63,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Fileparser.cs" />
+    <Compile Include="Filereader.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CircuitNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,11 +98,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="FileParser\" />
     <Folder Include="Interface\" />
-    <Folder Include="Patterns\BehaviourPatterns\" />
-    <Folder Include="Patterns\CreationPatterns\" />
-    <Folder Include="Patterns\StructurePatterns\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Circuits\Circuit1_FullAdder.txt" />

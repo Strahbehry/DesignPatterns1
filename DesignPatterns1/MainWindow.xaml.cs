@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Reflection;
 
 namespace DesignPatterns1
 {
@@ -20,9 +22,30 @@ namespace DesignPatterns1
     /// </summary>
     public partial class MainWindow : Window
     {
+        string[] _files;
         public MainWindow()
         {
             InitializeComponent();
+            fillCircuitList();
+
+        }
+
+        private void fillCircuitList()
+        {
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
+
+            _files = Directory.GetFiles(projectDirectory + @"\Circuits");
+            foreach (string file in _files)
+            {
+                CircuitList.Items.Add(System.IO.Path.GetFileName(file));
+            }
+        }
+
+        private void CircuitList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Filereader filereader = new Filereader();
+            filereader.setFilePath(_files[CircuitList.SelectedIndex]);
         }
     }
 }
