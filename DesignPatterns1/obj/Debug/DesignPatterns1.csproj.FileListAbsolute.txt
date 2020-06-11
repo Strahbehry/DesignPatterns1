@@ -1,0 +1,15 @@
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\DesignPatterns1.exe.config
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\DesignPatterns1.exe
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\DesignPatterns1.pdb
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.csprojAssemblyReference.cache
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1_MarkupCompile.cache
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1_MarkupCompile.lref
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.g.resources
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.Properties.Resources.resources
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.csproj.GenerateResource.cache
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.csproj.CoreCompileInputs.cache
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.exe
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.pdb
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\MainWindow.g.cs
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\App.g.cs
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\MainWindow.baml
