@@ -1,69 +1,47 @@
 ﻿using DesignPatterns1.Models;
+using DesignPatterns1.Models.CircuitGates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DesignPatterns1
 {
-    public class Fileparser
+    public sealed class Fileparser
     {
-        public Fileparser()
-        {
+        CircuitBoard circuitBoard;
+        private static Fileparser instance = null;
+        private static readonly object padlock = new object();
+        private CircuitBuilder circuitBuilder;
 
+        Fileparser()
+        {
+            circuitBoard = new CircuitBoard();
+            circuitBuilder = new CircuitBuilder();
         }
 
-        public List<CircuitNode> ParseCircuit(string[] _lines)
+        public static Fileparser Instance
         {
-            string[] lines = _lines;
-            bool parseNeighbours = false;
-
-
-            var nodes = new List<CircuitNode>();
-
-            foreach (var line in lines)
+            get
             {
-                if (IsDescription(line))
+                lock (padlock)
                 {
-                    parseNeighbours = true;
-                    continue;
-                }
-                else if ((parseNeighbours && !IsComment(line)))
-                {
-                    var split = line.Split(':');
-                    var name = split[0];
-                    var neighbours = split[1].Trim(';').Split(',');
-
-                    var node = nodes.Find(x => x.Name == name);
-
-                    foreach (var n in neighbours)
+                    if (instance == null)
                     {
-                        node.Edges.Add(n);
+                        instance = new Fileparser();
                     }
                 }
-                else if (!IsComment(line))
-                {
-                    string[] split = line.Split(':');
-                    nodes.Add(new CircuitNode()
-                    {
-                        Name = split[0].Trim(),
-                        Type = split[1].Trim(';').Trim()
-                    });
-                }
+                return instance;
             }
-
-            return nodes;
         }
 
-        private bool IsComment(string line)
+        public CircuitBoard ParseCircuit(string[] _lines)
         {
-            return line[0] == '#';
-        }
+            circuitBoard = circuitBuilder.BuildCircuit(_lines);
 
-        private bool IsDescription(string line)
-        {
-            return line.Equals("# Description of all the edges");
+            return circuitBoard;
         }
     }
 }

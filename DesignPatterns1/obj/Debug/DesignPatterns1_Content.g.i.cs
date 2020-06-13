@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("circuits/circuit1_fulladder.txt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("circuits/circuit2_decoder.txt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("circuits/circuit3_encoder.txt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("circuits/circuit4_infiniteloop.txt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("circuits/circuit5_notconnected.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/a.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/b.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cin.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cout.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sum.png")]
 
 

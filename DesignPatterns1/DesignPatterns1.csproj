@@ -35,8 +35,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Msagl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=640c57aa40e7ae7d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Msagl.1.1.3\lib\net40\Microsoft.Msagl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl.Drawing, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8a3d7c21d5fa1306, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Msagl.Drawing.1.1.3\lib\net40\Microsoft.Msagl.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl.GraphViewerGdi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=fffc27ea4058b3a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Msagl.GraphViewerGDI.1.1.3\lib\net40\Microsoft.Msagl.GraphViewerGdi.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -46,15 +57,27 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exceptions\CircuitInvalidException.cs" />
+    <Compile Include="Exceptions\InfiniteLoopException.cs" />
+    <Compile Include="Logging\LoggingDecorator.cs" />
+    <Compile Include="Strategies\SpecialNodeSelectionStrategy.cs" />
+    <Compile Include="Validators\InfiniteLoopValidator.cs" />
+    <Compile Include="Validators\NoDeadEndValidator.cs" />
+    <Page Include="Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,15 +86,34 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Strategies\DefaultNodeSelectionStrategy.cs" />
+    <Compile Include="DrawGraph.cs" />
     <Compile Include="Fileparser.cs" />
     <Compile Include="Filereader.cs" />
+    <Compile Include="Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strategies\INodeSelectionStrategy.cs" />
+    <Compile Include="IVisitable.cs" />
+    <Compile Include="IVisitor.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CircuitGates\AND.cs" />
+    <Compile Include="Models\CircuitBoard.cs" />
     <Compile Include="Models\CircuitNode.cs" />
+    <Compile Include="Models\InputNode.cs" />
+    <Compile Include="Models\CircuitGates\NAND.cs" />
+    <Compile Include="Models\CircuitGates\NOR.cs" />
+    <Compile Include="Models\CircuitGates\NOT.cs" />
+    <Compile Include="Models\CircuitGates\OR.cs" />
+    <Compile Include="Models\OutputNode.cs" />
+    <Compile Include="CircuitBuilder.cs" />
+    <Compile Include="Models\CircuitGates\XOR.cs" />
+    <Compile Include="NodeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -89,6 +131,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -97,15 +140,31 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interface\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Circuits\Circuit1_FullAdder.txt" />
     <Resource Include="Circuits\Circuit2_Decoder.txt" />
     <Resource Include="Circuits\Circuit3_Encoder.txt" />
     <Resource Include="Circuits\Circuit4_InfiniteLoop.txt" />
     <Resource Include="Circuits\Circuit5_NotConnected.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\help.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AND.PNG" />
+    <Resource Include="Images\NAND.PNG" />
+    <Resource Include="Images\NOR.PNG" />
+    <Resource Include="Images\NOT.PNG" />
+    <Resource Include="Images\OR.PNG" />
+    <Resource Include="Images\XOR.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\A.PNG" />
+    <Resource Include="Images\B.PNG" />
+    <Resource Include="Images\CIN.PNG" />
+    <Resource Include="Images\COUT.PNG" />
+    <Resource Include="Images\SUM.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

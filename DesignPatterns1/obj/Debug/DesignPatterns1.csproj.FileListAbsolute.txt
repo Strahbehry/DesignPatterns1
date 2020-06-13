@@ -13,3 +13,12 @@ C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1
 C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\MainWindow.g.cs
 C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\App.g.cs
 C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\MainWindow.baml
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\Help.g.cs
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\Help.baml
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\Microsoft.Msagl.dll
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\Microsoft.Msagl.Drawing.dll
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\Microsoft.Msagl.xml
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\Microsoft.Msagl.Drawing.xml
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+C:\Users\Mitch Terpak Test\Documents\Visual Studio 2017\Projects\DesignPatterns1\DesignPatterns1\obj\Debug\DesignPatterns1.csproj.CopyComplete

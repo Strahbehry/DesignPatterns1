@@ -8,12 +8,31 @@ using System.Windows;
 
 namespace DesignPatterns1
 {
-    public class Filereader
+    public sealed class Filereader
     {
-        string _path;
-        
-        public Filereader()
+        private static Filereader instance = null;
+        // Thread-safe implementation using a lock on a shared object
+        private static readonly object padlock = new object();
+        string _path { get; set;}
+
+
+        Filereader()
         {
+        }
+
+        public static Filereader Instance
+        {
+            get
+            {
+                lock (padlock)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Filereader();
+                    }
+                }
+                return instance;
+            }
         }
 
         public void setFilePath(string path)
@@ -36,6 +55,7 @@ namespace DesignPatterns1
             catch (Exception ex)
             {
                 MessageBox.Show("Something went wrong with reading the file: " + ex.Message);
+                return null;
             }
 
             return _lines;

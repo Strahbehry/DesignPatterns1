@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesignPatterns1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="DesignPatterns1" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="259*"/>
+            <ColumnDefinition Width="533*"/>
+        </Grid.ColumnDefinitions>
         <ComboBox x:Name="CircuitList" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CircuitList_SelectionChanged"/>
+        <Button x:Name="showCircuitBtn" Content="Go" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top" Width="37" Click="ShowCircuitBtn_Click"/>
+        <Button x:Name="helpBtn" Content="Hide/Show help" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Margin="415.31,10,0,0" Click="HelpBtn_Click" Grid.Column="1"/>
+        <WindowsFormsHost x:Name="graphForm" HorizontalAlignment="Left" Height="372" Margin="10,37,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
